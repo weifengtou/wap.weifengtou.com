@@ -1,2 +1,2 @@
-# dbconfig is ignore
-db.php
+# db.config ignore
+/db.php
