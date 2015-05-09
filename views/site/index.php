@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = '微风投';
 ?>
 <div class="site-index">
 
@@ -34,7 +34,7 @@ $this->title = 'My Yii Application';
 
                 <p>3333333333333333333333333333333333333333333</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">333 &raquo;</a></p>
+                <p><a class="btn btn-default" href="">333 &raquo;</a></p>
             </div>
         </div>
 
