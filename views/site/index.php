@@ -36,6 +36,27 @@ $this->title = '微风投';
 
                 <p><a class="btn btn-default" href="">333 &raquo;</a></p>
             </div>
+            <div class="col-lg-4">
+                <h2>333333</h2>
+
+                <p>3333333333333333333333333333333333333333333</p>
+
+                <p><a class="btn btn-default" href="">333 &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>333333</h2>
+
+                <p>3333333333333333333333333333333333333333333</p>
+
+                <p><a class="btn btn-default" href="">333 &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>333333</h2>
+
+                <p>3333333333333333333333333333333333333333333</p>
+
+                <p><a class="btn btn-default" href="">333 &raquo;</a></p>
+            </div>
         </div>
 
     </div>

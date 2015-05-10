@@ -1,21 +1,15 @@
 <?php
 
 namespace app\controllers;
-
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
 
-class SiteController extends Controller
+class SiteController extends \yii\web\Controller
 {
     public function behaviors()
     {
         return [
             'access' => [
-                'class' => AccessControl::className(),
+                'class' => \yii\filters\AccessControl::className(),
                 'only' => ['logout'],
                 'rules' => [
                     [
@@ -26,7 +20,7 @@ class SiteController extends Controller
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::className(),
+                'class' => \yii\filters\VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
                 ],
@@ -58,7 +52,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new \app\models\LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
@@ -77,7 +71,7 @@ class SiteController extends Controller
 
     public function actionContact()
     {
-        $model = new ContactForm();
+        $model = new \app\models\ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
