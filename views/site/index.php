@@ -9,7 +9,7 @@ $this->title = '微风投';
 
         <p class="lead">binner图</p>
 
-        <p><a class="btn btn-lg btn-success" href="">开始</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.yiichina.com/" target="_blank">开始</a></p>
     </div>
 
     <div class="body-content">

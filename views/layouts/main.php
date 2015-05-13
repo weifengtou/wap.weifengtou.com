@@ -26,11 +26,20 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => '微风投',
+                'brandLabel' => '<img src="http://www.weifengtou.com/public/static/images/logo32.png"></img>',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
+            ]);
+            echo Nav::widget([
+                'options'=>[
+                    'class'=>'navbar-nav',
+                ],
+                'items'=>[
+                    ['label'=>'好项目','url'=>['/site']],
+                    ['label'=>'投资人','url'=>['/site']],
+                ]
             ]);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
