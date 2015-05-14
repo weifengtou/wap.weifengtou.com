@@ -43,8 +43,6 @@ class SiteController extends \yii\web\Controller
 
     public function actionIndex()
     {
-        echo "string";
-        exit;
         return $this->render('index');
     }
 
@@ -88,5 +86,13 @@ class SiteController extends \yii\web\Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    
+    public function actionTest()
+    {
+        $sum = 42;
+        echo \Yii::t('app', 'Balance: {0}', $sum);
+//        echo Yii::$app->sourceLanguage;
+        exit;
     }
 }
