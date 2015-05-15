@@ -6,6 +6,15 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language'=>'zh-CN',
+    'sourceLanguage'=>'zh-CN',
+    'timezone'=>'Asia/Shanghai',
+    'charset' => 'utf-8',
+    'modules'=>[
+        'test'=>[
+            'class' => 'app\modules\test\test',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

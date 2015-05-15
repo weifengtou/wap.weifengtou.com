@@ -34,9 +34,9 @@ class LoginForm extends Model
     
     public function attributeLabels() {
         return [
-            'username'=>'用户名',
-            'password'=>'密码',
-            'rememberMe'=>'记住我'
+            'username'=>Yii::t('app', '用户名'),
+            'password'=>Yii::t('app', '密码'),
+            'rememberMe'=>Yii::t('app', '记住我')
         ];
     }
 
