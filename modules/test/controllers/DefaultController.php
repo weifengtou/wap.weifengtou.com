@@ -13,7 +13,6 @@ class DefaultController extends Controller
     }
     
     public function actionTest() {
-        echo 'string';
         return $this->render('test');
     }
 }
