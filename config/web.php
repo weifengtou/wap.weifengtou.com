@@ -6,12 +6,12 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language'=>'zh-CN',
-    'sourceLanguage'=>'zh-CN',
-    'timezone'=>'Asia/Shanghai',
-    'charset' => 'utf-8',
-    'modules'=>[
-        'test'=>[
+    'language' => 'zh-CN',
+    'sourceLanguage' => 'zh-CN',
+    'timezone' => 'Asia/Shanghai',
+//    'charset' => 'utf-8',
+    'modules' => [
+        'test' => [
             'class' => 'app\modules\test\test',
         ],
     ],

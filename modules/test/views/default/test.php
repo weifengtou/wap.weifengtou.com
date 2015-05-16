@@ -1,1 +1,2 @@
 test
+<?= Yii::$app->runtimePath ?>

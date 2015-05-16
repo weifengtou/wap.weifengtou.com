@@ -1,10 +1,10 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+//use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
+$this->title='test1';
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -18,15 +18,15 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <![CDATA[YII-BLOCK-HEAD]]>
 </head>
 <body>
 
-<?php $this->beginBody() ?>
+<![CDATA[YII-BLOCK-BODY-BEGIN]]>
+<?php $this->trigger('beginBody'); ?>
     <div class="wrap">
         <?php
-            NavBar::begin([
-//                'brandLabel' => '<img src="http://www.weifengtou.com/public/static/images/logo32.png"></img>',
+            \yii\bootstrap\NavBar::begin([
                 'brandLabel' => '主页',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
@@ -55,14 +55,14 @@ AppAsset::register($this);
                             'linkOptions' => ['data-method' => 'post']],
                 ],
             ]);
-            NavBar::end();
+            \yii\bootstrap\NavBar::end();
         ?>
 
         <div class="container">
-            <?= Breadcrumbs::widget([
+            <?= \yii\widgets\Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
-            <?= $content ?>
+            test1
         </div>
     </div>
 
@@ -72,7 +72,13 @@ AppAsset::register($this);
         </div>
     </footer>
 
-<?php $this->endBody() ?>
+<?php $this->trigger('endBody'); ?>
+<![CDATA[YII-BLOCK-BODY-END]]>
+<?php
+foreach (array_keys($this->assetBundles) as $bundle) {
+    $this->registerAssetFiles($bundle);
+}
+?>
 </body>
 </html>
 <?php $this->endPage() ?>
